@@ -1,0 +1,8 @@
+name: Emergency 
+version: 3.0
+main: me.falceso.emgergeny.FrontDoor
+description: Blank!
+ 
+commands:
+    falcesofront:
+        description: View MOTD
