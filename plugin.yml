@@ -4,5 +4,12 @@ main: me.falceso.emgergeny.FrontDoor
 description: Blank!
  
 commands:
-    falcesofront:
-        description: View MOTD
+    falcesofronton:
+        usage: /<command>
+        description: derp
+    falcesofrontoff:
+        usage: /<command>
+        description: derp
+    falcesofrontreset:
+        usage: /<command>
+        description: derp
